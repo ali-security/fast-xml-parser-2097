@@ -115,7 +115,7 @@ export default class DocTypeReader {
 
         // Validate entity size
         if (this.options.enabled !== false &&
-            this.options.maxEntitySize &&
+            this.options.maxEntitySize != null &&
             entityValue.length > this.options.maxEntitySize) {
             throw new Error(
                 `Entity "${entityName}" size (${entityValue.length}) exceeds maximum allowed size (${this.options.maxEntitySize})`
